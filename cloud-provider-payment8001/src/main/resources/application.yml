@@ -7,8 +7,8 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name:  com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/db
-    username: root
-    password: Suli2492217802
+    username: ray
+    password: 5583ray
 
 
 eureka:
