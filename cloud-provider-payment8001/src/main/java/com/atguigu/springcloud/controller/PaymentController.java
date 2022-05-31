@@ -27,16 +27,20 @@ public class PaymentController {
 
 
     @PostMapping(value="/payment/create")
-    public CommonResult create(@RequestBody  Payment payment)
-    {
+    public CommonResult create(@RequestBody  Payment payment) {
         int result = paymentService.create(payment);
-        log.info("插入结果"+result);
-        if(result > 0){
-            return new CommonResult(200,serverPort+"插入数据库成功",result);
+        log.info("插入结果" + result);
+        if (result > 0) {
+            return new CommonResult(200, serverPort + "插入数据库成功", result);
 
-        }else{
-            return new CommonResult(444,serverPort+"插入数据库失败",null);
+        } else {
+            return new CommonResult(444, serverPort + "插入数据库失败", null);
         }
+    }
+
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin() {
+        return "hi ,i'am paymentzipkin server fall back，welcome to atguigu，O(∩_∩)O哈哈~";
     }
 
     @GetMapping(value="/payment/get/{id}")
