@@ -14,6 +14,11 @@
     <name>cloudalibaba-sentinel-service8401</name>
     <dependencies>        <!--SpringCloud ailibaba nacos -->
         <dependency>
+            <groupId>com.atguigu.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
